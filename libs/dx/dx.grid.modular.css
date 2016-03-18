@@ -1,0 +1,211 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section, audio, canvas, video {
+  display: block; }
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  min-height: 100%;
+  font-size: 100%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+b, strong {
+  font-weight: bold; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img, img {
+  -ms-interpolation-mode: bicubic;
+  border: 0; }
+
+input, textarea, button, select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+textarea {
+  overflow: auto; }
+
+/*********************************************************************************************/
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5em; }
+
+.grid-modular {
+  position: relative;
+  /*overflow: hidden;*/
+  width: 72em;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  display: block; }
+
+.grid-modular:before, .grid-modular:after {
+  content: " ";
+  display: table; }
+
+.grid-modular:after {
+  clear: both; }
+
+.grid-modular .column, .grid-modular .columns {
+  background: #eee;
+  /*height: 100%;
+  width: $cols1;
+  position: absolute;
+  left: 50%; top: 0;
+  margin-left: 12/$em;*/
+  float: left;
+  padding: 0 0.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  outline: 1px solid black; }
+
+.grid-modular .onecol {
+  width: 4.5em; }
+
+.grid-modular .twocols {
+  width: 9em; }
+
+.grid-modular .threecols {
+  width: 13.5em; }
+
+.grid-modular .fourcols {
+  width: 18em; }
+
+.grid-modular .fivecols {
+  width: 22.5em; }
+
+.grid-modular .sixcols {
+  width: 27em; }
+
+.grid-modular .sevencols {
+  width: 31.5em; }
+
+.grid-modular .eightcols {
+  width: 36em; }
+
+.grid-modular .ninecols {
+  width: 40.5em; }
+
+.grid-modular .tencols {
+  width: 45em; }
+
+.grid-modular .elevencols {
+  width: 49.5em; }
+
+.grid-modular .twelvecols {
+  width: 54em; }
+
+.grid-modular .thirteencols {
+  width: 58.5em; }
+
+.grid-modular .fourteencols {
+  width: 63em; }
+
+.grid-modular .fifteencols {
+  width: 67.5em; }
+
+.grid-modular .sixteencols {
+  width: 72em; }
+
+section {
+  margin: .75em 0 3em; }
+
+section:before, section:after {
+  content: " ";
+  display: table; }
+
+section:after {
+  clear: both; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
+  margin: .375em 0; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 12px; }
+
+h6 {
+  font-size: 8px; }
+
+p {
+  margin: .75em 0 1.5em; }

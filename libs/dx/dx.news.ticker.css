@@ -1,0 +1,8 @@
+.dx_newsTicker { white-space: nowrap; overflow: hidden;/* margin: 1em 0; */height: 100%;}
+.dx_newsTicker span[class*="icon-"] { float: left; margin-right: .5em;  }
+.dx_newsTicker .text { font-size: 0.8em; text-overflow: ellipsis; overflow: hidden; display: inline-block; max-width: 700px; position: relative;height:1.5em;}
+.dx_newsTicker ul { list-style: none; margin: 0; position: relative; transition: all .5s ease-out;top: 0;}
+.dx_newsTicker ul li { list-style: none;opacity:0;transition:opacity .25s ease-out; }
+.dx_newsTicker ul li.active{opacity:1;}
+.dx_newsTicker ul li a { color: inherit; }
+.dx_newsTicker ul li:hover::after { content:"leia"; color:orange; margin-left:.5em }

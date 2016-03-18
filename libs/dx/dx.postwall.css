@@ -1,0 +1,122 @@
+/* 
+================================================
+Postwall Component
+================================================ 
+*/
+
+
+.postwall {
+    position: relative;
+}
+.postwall ul.wall {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.postwall ul.wall>li {}
+
+
+
+
+/*------------------------ adjusting fullwidth  ----------------------------*/
+.row.fullwidth .postwall ul.wall{
+  max-width: 100%;
+  width:100%;
+}
+
+
+/*------------------------ teaser mode  ----------------------------*/
+.postwall .post{position: relative;margin-bottom: 4em;}
+.postwall ul.wall.nogutter>li .post{margin-bottom:0}
+.postwall ul.wall>li .post .post-thumb {position: relative;}
+.postwall ul.wall>li.teaser .post .post-thumb{margin-bottom: 1em;}
+.postwall ul.wall>li .post-thumb a {position:relative;z-index:0;width:100%;display:block;margin:0;overflow:hidden;}
+.postwall ul.wall>li .post-thumb a img {width: 100%;display:block;margin: 0 auto;height: auto !important;max-width: 100% !important;}
+.postwall ul.wall>li .post-info{}
+.postwall ul.wall>li time{font-size:.75em;line-height: 1em;display: block;margin-bottom: 1em;}
+.postwall ul.wall>li a.readmore{white-space:nowrap;/* margin:0 0 0 .5em; */}
+.postwall ul.wall>li ul.categories{list-style:none;margin: 0;line-height: 1;}
+.postwall ul.wall>li ul.categories>li{
+    display: inline-block;
+    margin-right:.5em
+;
+}
+.postwall ul.wall>li ul.categories>li a{
+    font-size: 0.6em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    display: block;
+    line-height: 1em;
+}
+.postwall ul.wall>li ul.categories>li a:hover{
+    /* background-color: #48AFE1; */
+}
+
+
+/*------------------------ thumbnail with overlay mode ----------------------------*/
+.postwall ul.wall>li.thumb_overlay *{transition:all .25s ease-out;}
+.postwall ul.wall>li.thumb_overlay .post-info {position:absolute;top:0;left:0;z-index:1;pointer-events: none;background-color: rgba(0, 0, 0, 0.68);height: 100%;color: white;padding: 1em;opacity:0;overflow: hidden;width: 100%;}
+.postwall ul.wall>li.thumb_overlay .post-info h3 a{color:white}
+.postwall ul.wall>li.thumb_overlay .post-info .excerpt{font-size:.8em}
+.postwall ul.wall>li.thumb_overlay:hover .post-thumb a img{-webkit-transform: scale(1.05,1.05);}
+.postwall ul.wall>li.thumb_overlay:hover .post-info{opacity:1;}
+
+
+/*------------------------ header ----------------------------*/
+
+.postwall .header {
+    margin: 0 0 1em 0;
+    border-bottom: 1px solid #333;
+    /* padding: 1em 0; */
+    position: relative;
+    /* height: 4em; */
+    /* width: 100%; */
+}
+.postwall .header::after {/* content:''; *//* display:block; *//* clear:both; */}
+
+.postwall .header .title{display: block;}
+.postwall .header .title h3{}
+.postwall .header .title .subtext{}
+.tablet .postwall .header .title{/* float:left; */margin: 0 5em 0 0;display: block;}
+
+.postwall .header ul.filter {
+    list-style: none;
+    padding: 0;
+    display: block;
+    
+    /* text-align: center; */
+    /* padding: 1em 0; */
+}
+.tablet .postwall .header ul.filter,.desktop .postwall .header ul.filter{/* float: left; *//* position: relative; */    /* top: 50%; */    /* transform: translateY(-50%); */}
+
+
+.postwall .header ul.filter li {display: inline-block;float:none;line-height: 1em;margin-bottom: .5em;margin-right: 0.5em;}
+.postwall .header ul.filter li a{
+    background: #B4B4B4;    padding: .5em .75em;    
+    font-size: 0.75em;    text-transform: uppercase;    border-radius: 2px;    color: #FFF;    display: inline-block;    line-height: 1em;
+}
+.postwall .header ul.filter li + li{margin-right: 0.5em;}
+.postwall .header ul.filter li a.active{pointer-events:none;color: white;background-color: #333;}
+
+.postwall .header select{float:right;margin-left: 1em;display: inline-block;/* width: 70%; */}
+.postwall .header .filter_text { display: block;line-height: 35px; float: left;}
+.postwall .header .filter_box {display: block;}
+.tablet .postwall .header .filter_box,.desktop .postwall .header .filter_box {float: right;display: block;}
+
+/*------------------------ more posts ----------------------------*/
+.postwall .morePosts{text-align:center;margin: 3em 0;}
+.postwall .morePosts button{}
+
+
+
+/*------------------------ left aligned ----------------------------*/
+
+.postwall .left-aligned .post {
+    margin-bottom: 2em;
+}
+.postwall .left-aligned .post .post{}
+.postwall .left-aligned .post .post-thumb{
+    float: left;
+    margin-right: 1em;
+}
+.postwall .left-aligned .post .post-info{}

@@ -1,0 +1,70 @@
+.dx_calltoaction {
+    width: 100%;
+    background-size: cover;
+    display: block;
+    position: relative;
+    text-align: center;
+    /* padding: 1em; */
+}
+.dx_calltoaction::after{content:"";display:block;clear:both}
+.dx_calltoaction .heading{
+    position: relative;
+    display: inline-block;
+    /* margin: 1em; */
+}
+
+.dx_calltoaction .button{
+    /* margin:1em; */
+    display: inline-block;
+}
+
+.smartphone .dx_calltoaction{
+    text-align:center;
+}
+
+
+.smartphone .dx_calltoaction .heading{
+    margin: 1em;
+}
+
+.smartphone .dx_calltoaction .button{
+
+}
+
+
+.dx_calltoaction.small {
+    text-align: center;
+    height: 12em;
+    padding: 1em;
+}
+
+.dx_calltoaction.small .heading {
+    float: none;
+    display: block;
+}
+
+.dx_calltoaction.small .button {
+    float: none;
+}
+
+.dx_calltoaction.large {
+    text-align: center;
+    min-height: 4em;
+    height: 6em;
+}
+
+.dx_calltoaction.large .heading {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.dx_calltoaction.large .button {
+    /* float: right; */
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,66 @@
+.text_separator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 3em 0;
+}
+
+.text_separator > span {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
+
+.text_separator > span:before,
+.text_separator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    border-bottom-color: #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.text_separator > span:before {
+    right: 100%;
+}
+
+.text_separator > span:after {
+    left: 100%;
+}
+
+
+.text_separator>span>span.title::before,.text_separator>span>span.title::after{
+    content:'';/*here you can put decorations!*/
+}
+
+.text_separator.separator_align_center {
+    text-align: center;
+}
+.text_separator.separator_align_left {
+    text-align: left;
+}
+.text_separator.separator_align_right {
+    text-align: right;
+}
+
+.text_separator.separator_align_center>span>span.title {
+    margin: 0 1em;
+}
+
+
+.text_separator.separator_align_left>span>span.title {
+   margin: 0 1em 0 0;
+}
+.text_separator.separator_align_right>span>span.title {
+   margin: 0 0 0 1em;
+}
+
+.text_separator .subtext {
+    white-space: initial;
+    margin: 0 auto;
+    margin: 1em auto 0 auto;
+}

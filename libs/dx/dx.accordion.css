@@ -1,0 +1,52 @@
+
+/* Accordion
+================================================== */
+.accordion {
+}
+.accordion .toggler {
+  margin-bottom: .5em;
+}
+.accordion .toggler a.toggler_heading {
+  background-color: #eee;
+  padding: .75em 1em .75em 1em;
+  display: block;
+  outline: none !important;
+}
+.accordion .toggler a.toggler_heading::after {
+  content: "\e102";
+  float: left;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: .75em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  margin-right: 1em;
+  position: relative;
+  top: 3px
+}
+.accordion .toggler.active a.toggler_heading::after {
+  content: "\e101";
+}
+.accordion .toggler div.toggler_container {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  opacity: 0;
+  /* margin-bottom: 1em;
+  */
+}
+.accordion .toggler.active div.toggler_container {
+  opacity: 1;
+}
+.accordion .toggler div.toggler_content {
+  padding: .25em 0 1em 0;
+}

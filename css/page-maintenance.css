@@ -1,0 +1,19 @@
+
+.page-maintenance #splash {
+    text-align: center;
+    padding:2em;
+}
+
+.page-maintenance #splash img.logo {
+    width: 10em;
+}
+
+body.page-maintenance {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.page-maintenance #main {
+    flex:1;
+}

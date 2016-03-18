@@ -1,0 +1,150 @@
+/* ----------------------------------- share tab ------------------------------------ */
+
+.share-tab { clear: both; padding: 1em 0;}
+
+.share-tab::after{content:"";display:block;clear:both}
+
+.share-tab .container{
+    float: right;
+}
+
+.share-tab.mail{}
+
+.share-tab.mail .share-buttons{}
+
+.share-tab.mail .bloco-share-mail{
+    margin-left: 12px;
+}
+
+.share-tab .share-label{float:left;font-size: 1.5em;}
+
+.share-tab .container .share-buttons{
+    float: left;
+}
+
+
+
+.share-tab a.button-share { -webkit-transition: background-color .1s ease-out; -moz-transition: background-color .1s ease-out; -o-transition: background-color .1s ease-out; transition: background-color .1s ease-out; padding: 0.5em 0.5em; border-radius: .25em; -moz-box-shadow: rgba(0, 0, 0, .25) 0 -2px 0 inset; -webkit-box-shadow: rgba(0, 0, 0, .25) 0 -2px 0 inset; box-shadow: rgba(0, 0, 0, .25) 0 -2px 0 inset; text-align: center;text-decoration: none;      color: #FFF;      display: inline-block;}
+
+.share-tab a.button-share:hover{color:white}
+
+.share-tab a.button-share.none{
+    display: none;
+}
+
+.share-tab a.button-share span[class*="icon"] { background-position: center center; background-repeat: no-repeat; width: 15px; height: 15px; display: block; float: left; font-size: 0.8em; }
+
+.share-tab a.button-share span.text { margin-left: .7em; text-transform: uppercase; font-size: .66em; float: right; margin-top: .1em; }
+
+.share-tab a.button-share.facebook { background-color: #325c99; }
+
+.share-tab a.button-share.facebook:hover { background-color: rgba(38, 70, 116, 0.83) !important; }
+
+.share-tab a.button-share.twitter { background-color: #02ACEC; }
+
+.share-tab a.button-share.googleplus { background-color: #DD4B39; }    
+
+.share-tab a.button-share.googleplus .text{display:none}
+
+.share-tab a.button-share.linkedin {background-color: #007BB6;}
+
+.share-tab a.button-share.linkedin .text{display:none}
+
+.share-tab a.button-share.pinterest { background-color: #CB2027; }
+
+.share-tab a.button-share.pinterest .text{display:none}
+
+.share-tab a.button-share.mail { background-color: #e5621b; }
+
+.share-tab a.button-share.mail .text{display:none}
+
+/* ===================== Result messages ========================= */
+
+.share-tab .result-message{
+    float: left;
+}
+
+.share-tab .result-message > div{
+    display: none;
+    margin: -2px 0 0 1.2em;
+    color: #fff;
+    background-color: #58961A;
+    padding: 0.5em 3em 0.5em 1em;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    position: relative;
+}
+
+.share-tab .result-message > div:before{
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    position: absolute;
+    top: 7px;
+    left: -10px;
+    border-right:10px solid #58961A;
+}
+
+.share-tab .result-message > div:after{
+    content: 'x';
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    font-size: 13px;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+.share-tab .result-message .error{
+    background-color: #D77878;
+}
+
+.share-tab .result-message .error:before{
+    border-right-color: #D77878;
+}
+
+/* MAQUINA DE ESTADO SHARE */
+.share-tab .bloco-share-mail{
+
+    display: none;
+
+}
+
+.share-tab .bloco-share-mail .name-field { float: left; }
+
+.share-tab .bloco-share-mail .email-field { float: left; }
+
+.share-tab .bloco-share-mail .bloco-share-mail { display: none; }
+
+.share-tab .bloco-share-mail input { margin-right: .5em; float: left; }
+
+.share-tab .bloco-share-mail input[type=email]{
+    padding: .3em .95em;
+    border: 1px solid #CFCFCF;
+    width: 13em;
+}
+
+.share-tab .bloco-share-mail input[type=submit]{
+    box-shadow: 0 0 2px #7B7979;
+    padding: 0.3em 1em;
+    margin-top: 0.02em;
+}
+
+.share-tab .bloco-share-mail input[type=submit].load{
+    background: #fff url('/wp-content/themes/fam2015/images/ajax-loader.gif') center no-repeat;
+    color: transparent;
+}
+
+.share-tab.mail .bloco-share-mail { display: inline-flex; display: -webkit-inline-flex; display: -ms-inline-flexbox; }
+
+.share-tab.mail .bloco-share-default { display: none !important; }

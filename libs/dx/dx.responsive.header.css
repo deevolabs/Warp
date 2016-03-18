@@ -1,0 +1,275 @@
+/* ================================================== GENERAL SETTINGS ============================================================*/
+
+header.responsiveHeader {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    margin: 0 auto;
+    top:0;
+    z-index: 10000;
+    height: auto;
+    opacity:0;
+    pointer-events:none;
+}
+
+header.responsiveHeader,header.responsiveHeader * {
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    transition-property:opacity,width,height,transform;
+    
+}
+
+header.responsiveHeader.active{ 
+    opacity:1;
+    pointer-events:all;
+}
+
+header.responsiveHeader .container{height:100%;margin:0 auto;clear:both;padding:0 1em;position: relative;color: inherit;background-color: inherit;}
+header.responsiveHeader .widget { float: left; height: 100%; }
+header.responsiveHeader .widget-title { display: none; }
+
+
+/* wpadmin bar adjustment */
+.logged-in header.responsiveHeader{top: 46px;}
+@media screen and (min-width: 782px) {.logged-in header.responsiveHeader{ top: 32px; }}
+
+
+
+
+
+
+
+/* ======================================================= LOGO =======================================================*/
+header.responsiveHeader #logo { float: left; height: 100%; }
+header.responsiveHeader #logo a { display: block; background-position: left center; background-size: contain; background-repeat: no-repeat; /* min-height: 1em; */ /* height: 2em; */}
+header.responsiveHeader #logo a img#full_logo { display: block;width: auto; display: none; }
+header.responsiveHeader #logo a img#mobile_logo { display: block; }
+
+
+/* =====================================================SEARCH FUNCTION =========================================================*/
+header.responsiveHeader #search-button input[type="text"] { width: 0px; position: absolute; right: 0; z-index: 0; margin-top: -3px; /* pointer-events: none; */ opacity: 0; display: block; outline: none;}
+header.responsiveHeader #search-button input[type="text"]:focus{outline:none !important;box-shadow: none;}
+header.responsiveHeader.searching #minimenu #search-button input[type="text"] { pointer-events: all; opacity: 1; min-width: 205px; }
+header.responsiveHeader.searching #mainMenu { opacity: 0; pointer-events: none; }
+
+
+/* ================================================ MINI MENU ==============================================================*/
+
+header.responsiveHeader #minimenu { float: right; height: 100%; position: relative; }
+header.responsiveHeader #minimenu ul { list-style: none; margin: 0; padding: 0; /* overflow: hidden; */}
+header.responsiveHeader #minimenu ul::after{content: " ";clear:both;display: block;}
+header.responsiveHeader #minimenu ul li { float: left; display: block; margin: 0; padding: 0; position: relative; }
+header.responsiveHeader #minimenu a { display: block; padding: .25em; width: 2em; font-size: 1.25em; text-align: center; color: inherit; position: relative; text-decoration: none;}
+
+
+
+
+
+/* ================================================ MAIN MENU ==============================================================*/
+
+header.responsiveHeader #mainMenu {
+    clear: both;
+}
+header.responsiveHeader #mainMenu div.vcenter_container {
+    width: 100%;
+}
+
+header.responsiveHeader ul.navbar {
+    list-style: none;
+    position: relative;
+    margin: 0;
+
+    padding: 0;
+
+}
+header.responsiveHeader ul.navbar::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+header.responsiveHeader ul.navbar li {
+
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    position: relative;
+}
+
+
+header.responsiveHeader ul.navbar ul {
+    padding: 0;
+    top: 100%;
+    margin: 0;
+    z-index: 1;
+    max-height:0px;
+    overflow:hidden;    margin: 0;padding: 0;float: none;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+header.responsiveHeader ul.navbar ul li {
+    float: none;
+    position: relative;
+      display: block;
+}
+
+
+
+
+
+/* all links inside the menu*/
+header.responsiveHeader ul.navbar li a {
+    display: block;
+    text-decoration: none;
+    /* padding: .25em .5em; */
+    text-align: left;
+    white-space: nowrap;
+    color:inherit;
+    /* font-size: .8em; */
+}
+
+
+
+/* =========================================== Compact menu =====================================================*/
+
+.smallScreen header.responsiveHeader ul.navbar li a { pointer-events: none; /* height: 4em; */ /* line-height: 3em; */ /* padding-top: .5em; */ /* padding-bottom: .5em; */ }
+
+.smallScreen header.responsiveHeader.showing_menu ul.navbar{opacity: 1 !important;/* transition-delay: .25s; */}
+.smallScreen header.responsiveHeader.showing_menu ul.navbar li a { pointer-events: all; opacity: 1; }
+.smallScreen header.responsiveHeader.showing_menu ul.navbar>li:last-child a {border:none;}
+.smallScreen header.responsiveHeader.showing_menu ul.navbar li.active>ul { max-height: 320px; }
+
+
+
+
+/* =========================================== Full menu =====================================================*/
+.largeScreen header.responsiveHeader #firstRow { display: block; padding: 0; width: 100%; }
+.largeScreen header.responsiveHeader .container {
+    max-width: 1920px;
+ }
+.largeScreen header.responsiveHeader #firstRow>.container::after { content: " "; display: block; clear: both; }
+.largeScreen header.responsiveHeader #secondRow #logo a img#full_logo { display: block; /* height: 32px;  */ }
+.largeScreen header.responsiveHeader #secondRow #logo a img#mobile_logo { display: none; }
+.largeScreen header.responsiveHeader #secondRow #minimenu #menu-button { display: none; }
+.largeScreen header.responsiveHeader #secondRow #mainMenu { position: relative; clear: none; float: right; -webkit-transform: scale(1); margin-right: 2em; height: 100%; display: block; }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar { /* float: right; */ }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar>li { float: left; clear: none; }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar ul { position: absolute; display: block; opacity: 0; pointer-events: none; max-height: 0px; overflow: initial; max-width: 350px; transition-duration: .1s; }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar ul ul { position: absolute; top: 0; left: 100%; }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar li.active>ul { display: block; opacity: 1; pointer-events: all; max-height: 320px;}
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar>li>ul a { margin-left: 0 }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar>li>ul ul a { margin-left: 0 }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar>li>ul ul ul a { margin-left: 0 }
+.largeScreen header.responsiveHeader #secondRow #mainMenu ul.navbar ul.sub-menu { /* background: inherit; */ /* clear: both; */ /* overflow: hidden; */ /* max-height: 720px; */}
+.largeScreen header.responsiveHeader.searching #secondRow #search-button input[type="text"] { width: 320px; }    
+
+
+header.responsiveHeader #menuHolder {
+    overflow: hidden;
+}
+
+header.responsiveHeader:not(.showing_menu) #menuHolder {
+    height: 0 !important;
+    pointer-events: none;
+}
+.smallScreen header.responsiveHeader div#mainMenu {
+    height: 0;
+}
+.smallScreen header.responsiveHeader ul.navbar {
+    opacity: 0;
+    /* transition-delay: 0; */
+}
+
+/* =========================================== MAXIMIZED / MINIMIZED STATE =====================================================*/
+
+/* colors */
+header.responsiveHeader, .largeScreen header.responsiveHeader ul.sub-menu{background-color: white;}
+header.responsiveHeader #firstRow { background-color:#333}
+header.responsiveHeader:hover {  }
+header.responsiveHeader.minimized{}
+
+.smallScreen header.responsiveHeader.showing_menu {/* background-color: white; *//* height: 100%; */}
+.smallScreen header.responsiveHeader.showing_menu #minimenu li#menu-button a {color:red}
+.smallScreen header.responsiveHeader.showing_menu ul.navbar li a {  /* border-bottom: 1px solid #ddd; */ }
+
+.largeScreen header.responsiveHeader ul.navbar>li>a:hover { color: red; }
+.largeScreen header.responsiveHeader ul.navbar>li>ul a:hover { background-color: #eee; }
+
+
+/* menu and submenus body shadow */
+header.responsiveHeader,.largeScreen header.responsiveHeader ul.sub-menu{box-shadow: 0 1px 12px rgba(0, 0, 0, 0.22);}
+
+
+/* heights both full and minimized  modes*/
+.smallScreen header.responsiveHeader #firstRow { display:none;}
+header.responsiveHeader #firstRow { height: 2em;display:block;}
+
+
+.largeScreen header.responsiveHeader.minimized #firstRow { height: 0em; overflow: hidden;}
+.smallScreen header.responsiveHeader.minimized #firstRow { height: 0em; overflow: hidden;}
+
+
+.largeScreen header.responsiveHeader #logo a {/* min-width: 2em; *//* height: 1.5em; *//* width: 10em; *//* width: 100%; */}
+.largeScreen header.responsiveHeader.minimized #logo a {/* height: 1.2em; *//* width: 10em; */}
+
+.smallScreen header.responsiveHeader #secondRow { height: 3em; }
+.smallScreen header.responsiveHeader.minimized #secondRow { height: 3em; }
+.smallScreen header.responsiveHeader.showing_menu ul.navbar li a { }
+.largeScreen header.responsiveHeader #firstRow { height: 2em;}
+.largeScreen header.responsiveHeader #secondRow { height: 5em;}
+.largeScreen header.responsiveHeader.minimized #secondRow { height: 3em;}
+
+
+.largeScreen header.responsiveHeader ul.navbar li a {
+    padding: .25em 1em;;
+    font-size: .8em;
+}
+
+.smallScreen header.responsiveHeader ul.navbar li a {
+    padding: .25em 1em;;
+    font-size: 1em;
+}
+
+
+.smallScreen header.responsiveHeader ul.navbar{box-shadow: 0 1px 12px rgba(0, 0, 0, 0.22);}
+.smallScreen header.responsiveHeader ul.navbar{position:absolute;right:0;background-color:white;}
+
+
+
+.smallScreen header.responsiveHeader ul.navbar>li>ul a{margin-left:1em}
+.smallScreen header.responsiveHeader ul.navbar>li>ul ul a{margin-left:2em}
+
+
+
+
+header.responsiveHeader.minimized #firstRow>.container { opacity:0;pointer-events:none; }
+
+header.responsiveHeader h1 {
+    margin: 0;
+    height: 100%;
+}
+
+header.responsiveHeader h1 span.title{display:none}
+
+header.responsiveHeader h1 img {
+    display: block;
+    margin: 0 !important;
+    padding: 0;
+    height: 1em;
+    width: auto;
+}
+
+.largeScreen header.responsiveHeader h1 img {
+    height: 1.5em;
+}
+
+.largeScreen header.responsiveHeader.minimized h1 img{
+    height:1em;
+}
+
+.smallScreen #main {
+    margin-top: 3em;
+}

@@ -1,0 +1,85 @@
+/* ------------------------------ basic row/columns settings  -------------------------------------- */
+.grid-fluid-12 { }
+.grid-fluid-12 .row { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 64em; *zoom: 1; position: relative; }
+.grid-fluid-12 .row:before, .grid-fluid-12 .row:after { content: " "; display: table; }
+.grid-fluid-12 .row:after { clear: both; }
+.grid-fluid-12 .row .column, .grid-fluid-12 .row .columns { position: relative; padding-left: 1em; padding-right: 1em; }
+.grid-fluid-12 .row .row { position: relative; width: auto; margin-left: -1em; margin-right: -1em; margin-top: 0; margin-bottom: 0; *zoom: 1; }
+.grid-fluid-12 .row .row:before, .grid-fluid-12 .row .row:after { content: " "; display: table; }
+.grid-fluid-12 .row .row:after { clear: both; }
+/* ------------------------------ collapsible columns  -------------------------------------- */
+.grid-fluid-12 .row.collapse .column, .grid-fluid-12 .row.collapse .columns { position: relative; padding-left: 0; padding-right: 0; }
+.grid-fluid-12 .row .row.collapse { width: auto; margin: 0; max-width: none; *zoom: 1; }
+.grid-fluid-12  .row .row.collapse:before, .grid-fluid-12 .row .row.collapse:after { content: " "; display: table; }
+.grid-fluid-12 .row .row.collapse:after { clear: both; }
+/* OBSOLETE:use collapsible instead */
+.row.nogutter { margin: 0 !important; }
+.row.nogutter .columns { padding: 0 !important; }
+.row.nogutter .row { margin: 0 !important; }
+/* ------------------------------ fullwidth  -------------------------------------- */
+.row.fullwidth { width: 100%; max-width: 100% !important; background-size: cover; }
+
+
+.row.fullwidth .row { margin: 0 auto !important; }
+.row.fullwidth .columns { padding:0 !important; }
+.row.fullwidth_bg { width: 100%; max-width: 100% !important; background-size: cover; }
+.row.fullwidth_bg .row_container { margin: 0 auto !important; }
+.row.fullwidth_bg .row_container::after { content:" ";display:block;clear:both; }
+
+/* ------------------------------ small screens  -------------------------------------- */
+.grid-fluid-12 .row .small-1 { position: relative; width: 8.33333%; }
+.grid-fluid-12 .row .small-2 { position: relative; width: 16.66667%; }
+.grid-fluid-12 .row .small-3 { position: relative; width: 25%; }
+.grid-fluid-12 .row .small-4 { position: relative; width: 33.33333%; }
+.grid-fluid-12 .row .small-5 { position: relative; width: 41.66667%; }
+.grid-fluid-12 .row .small-6 { position: relative; width: 50%; }
+.grid-fluid-12 .row .small-7 { position: relative; width: 58.33333%; }
+.grid-fluid-12 .row .small-8 { position: relative; width: 66.66667%; }
+.grid-fluid-12 .row .small-9 { position: relative; width: 75%; }
+.grid-fluid-12 .row .small-10 { position: relative; width: 83.33333%; }
+.grid-fluid-12 .row .small-11 { position: relative; width: 91.66667%; }
+.grid-fluid-12 .row .small-12 { position: relative; width: 100%; }
+/* ------------------------------ large screens  at breakpoint:768px -------------------------------------- */
+@media only screen and (min-width:768px) {
+  .grid-fluid-12 .row .column, .grid-fluid-12 .row .columns { padding-left: 1em; padding-right: 1em; float: left; }
+  .grid-fluid-12 .row .row { margin-left: -1em; margin-right: -1em; }
+  .grid-fluid-12 .row .large-1 { position: relative; width: 8.33333%; }
+  .grid-fluid-12 .row .large-2 { position: relative; width: 16.66667%; }
+  .grid-fluid-12 .row .large-3 { position: relative; width: 25%; }
+  .grid-fluid-12 .row .large-4 { position: relative; width: 33.33333%; }
+  .grid-fluid-12 .row .large-5 { position: relative; width: 41.66667%; }
+  .grid-fluid-12 .row .large-6 { position: relative; width: 50%; }
+  .grid-fluid-12 .row .large-7 { position: relative; width: 58.33333%; }
+  .grid-fluid-12 .row .large-8 { position: relative; width: 66.66667%; }
+  .grid-fluid-12 .row .large-9 { position: relative; width: 75%; }
+  .grid-fluid-12 .row .large-10 { position: relative; width: 83.33333%; }
+  .grid-fluid-12 .row .large-11 { position: relative; width: 91.66667%; }
+  .grid-fluid-12 .row .large-12 { position: relative; width: 100%; }
+}
+/* ------------------------------ row sizes  -------------------------------------- */
+.grid-fluid-12 .row { max-width: 320px; }
+.row.fullwidth_bg .row_container { max-width: 320px; }
+@media screen and (min-width:480px) {
+  .grid-fluid-12 .row { max-width: 440px; }
+  .row.fullwidth_bg .row_container { max-width: 440px; }
+}
+@media screen and (min-width:640px) {
+  .grid-fluid-12 .row { max-width: 600px; }
+  .row.fullwidth_bg .row_container { max-width: 600px; }
+}
+@media screen and (min-width:768px) {
+  .grid-fluid-12 .row { max-width: 720px; }
+  .row.fullwidth_bg .row_container { max-width: 720px; }
+}
+@media screen and (min-width:1024px) {
+  .grid-fluid-12 .row { max-width: 960px; }
+  .row.fullwidth_bg .row_container { max-width: 960px; }
+}
+@media screen and (min-width:1280px) {
+  .grid-fluid-12 .row { max-width: 1152px; }
+  .row.fullwidth_bg .row_container { max-width: 1152px; }
+}
+@media screen and (min-width:1680px) {
+  .grid-fluid-12 .row { max-width: 1440px; }
+  .row.fullwidth_bg .row_container { max-width: 1440px; }
+}

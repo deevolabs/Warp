@@ -1,0 +1,11 @@
+
+/* home  ======================================================= */
+.home #splash{
+    height:60vh;
+    background: #665464;
+    color:white;
+}
+.home #splash>.row_container{height:100%}
+.home #splash>.row_container>.columns{height:100%}
+.home #MajorFeatures{}
+.home #MajorFeatures img{margin-bottom:1em}

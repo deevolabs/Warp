@@ -1,0 +1,123 @@
+
+
+/* hscroller
+================================================== */   
+
+.hscroller {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: auto;
+}
+.hscroller>#scrollBox{position:relative;overflow:hidden;z-index:0};
+.hscroller>#scrollBox>#scroller{float:left;}
+
+.hscroller .slide{margin-right: 5px;text-align: center;width: 240px;min-height: 50px;display: block;float:left;}
+.hscroller .slide.medium{/*width: 185px;*/}
+.hscroller .slide.small{}
+.hscroller a.arrow{
+    float: left;
+    width: 3em;
+    height: 10em;
+    line-height:10em;
+    /*-webkit-transition: background-color 0.25s ease-out;  */
+    background-color: #fafafa;
+}
+.hscroller a.arrow.right{
+    float: right;
+    clear: right;
+    margin-left: 5px;
+}
+.hscroller a.arrow.right::before{
+    content: '>';
+}
+.hscroller a.arrow.left{
+    margin-right: 5px;
+    background-position: -66px center;
+}
+.hscroller a.arrow.left::before{
+    content: '<';
+}
+
+.hscroller a.arrow:hover{
+    background-color: #eee;
+}
+
+.hscroller  a.arrow.left:hover {
+    background-position: -44px center;
+}
+.hscroller a.arrow.right:hover {
+}
+
+.hscroller .navBar {
+    display: block;
+    margin: 1em auto;
+    overflow: hidden;
+    clear: both;    
+    min-height: 1em;    
+    line-height: 1em;
+}
+
+.hscroller .navBar ul{
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+}
+.hscroller .navBar ul li{
+    float: left;
+    text-align: center;
+}
+
+
+
+
+.hscroller .navBar.items ul li a{
+    text-transform: lowercase;        
+    background-color: #ddd;  
+    display: block;  
+    text-align: center;
+    content: '*';
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+.hscroller .navBar.items ul li a:hover{ background-color: #444; }
+.hscroller .navBar.items ul li.active a {text-decoration: none;color: #ccc;}
+
+.hscroller .navBar.pages ul li a{
+    text-transform: lowercase;        
+    display: block;  
+    text-align: center;
+    margin-right: 1em;
+    font-size: 1em;
+}
+.hscroller .navBar.pages ul li a:hover{ }
+.hscroller .navBar.pages ul li.active a {text-decoration: none;color: #aa0000;}
+
+
+
+
+
+.hscroller .navBar .btNav{
+    float: left;
+    text-transform: lowercase;  font-family: bodoni, Georgia, "Times New Roman", Times, serif;  font-size: 14px;  
+    font-weight: bold;  color: #312F30;  display: inline-block;  
+    padding: 0 3px;
+    font-style: italic;
+}
+.hscroller .navBar #btPrev{}
+.hscroller .navBar #btNext{}
+
+
+
+
+.hscroller.boxesGallery{}
+.hscroller.boxesGallery .slide{background-color: #FAEAEC; color:white; font-weight:bold;height:10em;width:10em;line-height:10em}
+.hscroller.boxesGallery .slide:hover{background-color: #FFC2C8; }
+.hscroller.boxesGallery .slide.active{background-color:#FF6677; }
+
+
+
+.hscroller.imageGallery{}
+
+

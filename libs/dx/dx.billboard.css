@@ -1,0 +1,80 @@
+
+/* Billboard
+================================================== */		
+.billboard {overflow:hidden;position:relative}
+.billboard.ready {}
+				
+.billboard .viewport{position:relative;overflow:hidden;}
+	
+.billboard .viewport .slides{overflow:hidden;}		
+.billboard .viewport .slides .slide{display:block;float:left;}
+.billboard .viewport .slides .slide.loading{background:url(../images/loading.gif) center center no-repeat;}
+				
+.billboard .viewport .slides .slide img{display:block;width:100%;height:540px;border:none;}
+
+.billboard .viewport .slides .slide img{opacity:0;-webkit-transition:opacity 0.5s ease-out;-moz-transition:opacity 0.5s ease-out;-ms-transition:opacity 0.5s ease-out;transition:opacity 0.5s ease-out;-webkit-backface-visibility: hidden;-webkit-perspective: 1000;-webkit-transition-delay:0.25s;-moz-transition-delay:0.25s;-ms-transition-delay:0.25s;transition-delay:0.25s;}
+
+body.MSIE .billboard .viewport .slides .slide img{visibility:hidden;}
+body.AndroidTablet .billboard .viewport .slides .slide img{visibility:hidden;}
+
+.billboard .viewport .slides .slide img.ready{opacity:1;height:auto;}
+
+body.MSIE .billboard .viewport .slides .slide img.ready{visibility:visible;height:auto;}
+body.AndroidTablet .billboard .viewport .slides .slide img.ready{visibility:visible;height:auto;}
+
+.billboard .navBar {display:block;overflow: hidden;width: 100%;position: relative;text-align: center;line-height: 0;}
+.billboard .navBar ul.nav {display: inline-block;float: none;overflow: hidden;margin: 10px auto;padding: 0 20px;}
+.billboard .navBar ul.nav li {float: left;list-style-type: none;background-color: #ccc;margin-left: 15px;width: 10px;height: 10px;cursor: pointer;display: block;border-radius: 5px;}
+.billboard .navBar ul.nav li.active{background-color:black !important}
+.billboard .navBar ul.nav li.ready{background-color:#777}		
+.billboard .navBar ul.nav li#i0{margin-left:0;}
+
+		
+.billboard .btNav{
+	display:block;
+	width:37px;
+	height:36px;
+	position:absolute;
+	top:228px;
+	-webkit-transition: left 0.25s ease-out,right 0.25s ease-out,opacity 0.25s ease-out;	
+	-moz-transition: left 0.25s ease-out,right 0.25s ease-out,opacity 0.25s ease-out;
+	transition: left 0.25s ease-out,right 0.25s ease-out,opacity 0.25s ease-out;
+	opacity: 0;
+}
+
+.billboard .btNav.active{
+	opacity:1;
+}
+
+.billboard .btNav.left{
+	left:-37px;	
+}
+.billboard .btNav.left.active{
+	left:0;
+}
+
+.billboard .btNav.right{
+	right: -37px;
+}
+.billboard .btNav.right.active{
+	right:0;
+}
+
+.billboard .btNav.left:link,
+.billboard .btNav.left:visited {
+	background: url('../images/slider_arrows_left.png') 0 0 no-repeat;
+}
+.billboard .btNav.left:hover,
+.billboard .btNav.left:active {
+	background: url('../images/slider_arrows_left.png') 0 -36px no-repeat;
+}
+
+.billboard .btNav.right:link,
+.billboard .btNav.right:visited {
+	background: url('../images/slider_arrows_right.png') 0 0 no-repeat;
+}
+.billboard .btNav.right:hover,
+.billboard .btNav.right:active {
+	background: url('../images/slider_arrows_right.png') 0 -36px no-repeat;
+}
+		

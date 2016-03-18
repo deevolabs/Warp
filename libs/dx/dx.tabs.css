@@ -1,0 +1,180 @@
+
+/* Tabs
+================================================== */
+.tabs.horizontal {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.tabs.horizontal ul.nav {
+  display: block;
+  margin: 0 0 0px 0;
+  padding: 0;
+  border-bottom: solid 1px #ddd;
+  padding-left: 0.5em;
+}
+.tabs.horizontal ul.nav li {
+  display: block;
+  width: auto;
+  padding: 0;
+  float: left;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.tabs.horizontal ul.nav li a {
+  display: block;
+  text-decoration: none;
+  width: auto;
+  padding: 0.5em 1.25em;
+  margin: 0;
+  background: #f5f5f5;
+  font-size: .75em;
+  top: .5em;
+  position: relative;
+  border-color: #ddd;
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;  
+  outline: none !important;
+}
+.tabs.horizontal ul.nav li.active a {
+  background: #fff;
+  position: relative;
+  padding-top: .75em;
+  position: relative;
+  padding-bottom: .75em;
+  top: 1px;
+  border-right-width:1px
+}
+
+.tabs.horizontal ul.nav li:first-child a {border-left-width:1px}
+.tabs.horizontal ul.nav li:last-child a {border-right-width:1px}
+.tabs.horizontal ul.nav li+li a {border-left-width:1px}
+.tabs.horizontal ul.nav li.active+li a {border-left-width:0px}
+
+.smallScreen .tabs ul.nav{
+  display: none;
+}
+
+.tabs.horizontal select.nav{
+  width: 100%;
+}
+
+.largeScreen .tabs select.nav{
+  display: none;
+}
+
+.tabs.horizontal ul.content {
+  margin: 0;
+  display: block;
+  background-color: white;
+}
+.tabs.horizontal ul.content > li {
+  display: none;
+  padding: .5em 0 0 0;
+}
+.tabs.horizontal ul.content > li.active {
+  display: block;
+}
+
+/* Clearfixing tabs for beautiful stacking */
+.tabs.horizontal ul.nav:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.tabs.horizontal ul.nav {
+  zoom: 1;
+}
+.tabs.vertical {
+}
+.tabs.vertical .nav {
+  float: left;
+  clear: none;
+  z-index: 0;
+  border-bottom: none;
+  padding: .25em 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+.tabs.vertical .nav li {
+  clear: both;
+}
+.tabs.vertical .nav li.active {
+}
+.tabs.vertical .nav li a {
+  display: block;
+  text-decoration: none;
+  border: solid 1px #ddd;
+  background: #f5f5f5;
+  font-size: .75em;
+  position: relative;
+  border-width: 0px 0px 0px 1px;
+  padding: .5em 1.5em .5em 1.25em;
+  left: .5em;
+  outline: none !important;
+}
+.tabs.vertical .nav li:first-child a {
+  border-top-width: 1px
+}
+.tabs.vertical .nav li:last-child a {
+  border-bottom-width: 1px;
+}
+.tabs.vertical .nav li+li a {
+  border-top-width: 1px;
+}
+.tabs.vertical .nav li.active+li a {
+  border-top-width: 0px;
+}
+.tabs.vertical .nav li.active a {
+  background: #fff;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  position: relative;
+  padding-bottom: .75em;
+  z-index: 5;
+  border-width: 1px 0 1px 1px;
+  left: 1px;
+  padding: .5em 1.5em .5em 1.25em;
+}
+
+.tabs.vertical .content {
+  display: block;
+  background-color: white;
+  float: left;
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  border-left: 1px solid #DDD;
+  min-height: 8em;
+  padding: 0 0 0 1em;
+  list-style: none;
+  margin: 0;
+}
+.tabs.vertical .content li {
+  display: none;
+  padding: 0;
+}
+.tabs.vertical .content li.active {
+  display: block;
+}

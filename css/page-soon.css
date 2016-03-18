@@ -1,0 +1,23 @@
+img.logo {
+    width: 10em;
+}
+.page-soon #splash {
+    text-align: center;
+    padding:2em;
+}
+
+.page-soon #contact {
+    text-align: center;
+}
+
+
+
+body.page-soon {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.page-soon #main {
+    flex:1;
+}

@@ -1,0 +1,83 @@
+
+.dx_widgetCurso {background-color: #eee; padding: 1em 2em; margin-top: 4em;font-weight: 300;}
+.dx_widgetCurso .title{
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 0.8em;
+}
+.dx_widgetCurso .title h2{
+    margin: 0 0 .25em;
+    font-size: 1.5em;
+}
+.dx_widgetCurso .meta{
+    margin-bottom: 0.5em;
+}
+.dx_widgetCurso .meta .duracao{
+}
+.dx_widgetCurso .meta .title{}
+.dx_widgetCurso .meta .value{
+    font-weight: bold;
+}
+
+.dx_widgetCurso form{}
+.dx_widgetCurso form .title{
+    margin-bottom: 1em;
+}
+.dx_widgetCurso form .group_periodo{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.dx_widgetCurso form .group_periodo .field{margin:0 0 .5em 0}
+.dx_widgetCurso form .group_periodo .field.active{font-weight:bold}
+
+.dx_widgetCurso form .group_periodo .field_manha{display:inline-block}
+.dx_widgetCurso form .group_periodo .field_noite{margin-left: 1em; display:inline-block}
+
+.dx_widgetCurso form .group_periodo .field{display:inline-block;cursor: pointer;}
+
+.dx_widgetCurso form .group_periodo .field label{cursor:pointer}
+
+.dx_widgetCurso form .mensalidade{font-weight:700;}
+
+
+
+.dx_widgetCurso .inscricoesAbertas{
+    margin: 1em auto;
+    text-align: center;
+}
+.dx_widgetCurso .inscricoesAbertas .text{
+    font-size: .9em;
+    margin-bottom: 0.5em;
+}
+.dx_widgetCurso .inscricoesAbertas .button .inscrever{}
+.dx_widgetCurso .interesse{
+    text-align: center;
+    margin: 1em auto 0 auto;
+}
+.dx_widgetCurso .interesse .text{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+.dx_widgetCurso .interesse .group{}
+.dx_widgetCurso .interesse input{
+    display: inline-block;
+    width: 180px;
+}
+.dx_widgetCurso .interesse .enviar{
+    display: inline-block;
+    font-size: .8em;
+    padding: 0.55em .5em;
+}
+
+
+.dx_widgetCurso .inscricoesAbertas .button {
+    padding: .5em 2em;
+    font-size: 1em;
+}
+
+.dx_widgetCurso.aberto .inscricoesAbertas{display:block;margin-top: 1.5em;}
+.dx_widgetCurso.fechado .inscricoesAbertas{display:none;}
+
+.dx_widgetCurso.aberto .interesse{display:none;}
+.dx_widgetCurso.fechado .interesse{display:block;}
