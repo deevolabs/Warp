@@ -1,4 +1,4 @@
 # warp
 
 
-Tema para wordpress by Deevo
+Tema para wordpress by Deevo.
